@@ -11,4 +11,4 @@ The VulnPilot team (names are first names, GitHub usernames in brackets). To add
 7. Maham - @khanmahammehmood2-cloud (`ioc.py`)
 8. Noor - @DecodeLabs-Internship86 (`risk.py`)
 9. Zain - @zainulabideenab9-cloud (`timeline.py`)
-10. Haseeb - @haseebhassan14129-ship-it
+10. Haseeb - @haseebhassan14129-ship-it (`report.py`)
