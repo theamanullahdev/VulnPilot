@@ -45,7 +45,16 @@ def make_hash(report_text, evidence_lines):
     result = dummy_hash()  # placeholder, so the whole app works from the first minute
 
     ### WRITE YOUR CODE BELOW THIS LINE ###
-    # Replace the placeholder by building your own `result` here, step by step.
+    report_lines = []
+    for line in report_text.replace("\r\n", "\n").split("\n"):
+        report_lines.append(line.rstrip())
+    clean_report = "\n".join(report_lines).strip()
+    clean_evidence = []
+    for line in evidence_lines:
+        clean_evidence.append(line.rstrip())
+    clean_evidence = sorted(clean_evidence)
+    combined = clean_report + "\n---EVIDENCE---\n" + "\n".join(clean_evidence)
+    result = hashlib.sha256(combined.encode("utf-8")).hexdigest()
     ### WRITE YOUR CODE ABOVE THIS LINE ###
 
     return result

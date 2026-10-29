@@ -14,6 +14,6 @@ The VulnPilot team, with the work each person did. Names are as the team uses th
 10. **Haseeb** - @haseebhassan14129-ship-it: `report.py`
 11. **Daman Fatima**: collaboration and documentation, setup help for teammates, collecting everyone's GitHub usernames and Devpost emails
 
-Still to come: **Ibrahim** (`hashing.py`). He will be added when his pull request is merged.
+`hashing.py` was written by Amanullah so everything works. **Ibrahim** is assigned to it and will be added as soon as his pull request is merged.
 
 To add or fix your name, send a pull request.
