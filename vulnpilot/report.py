@@ -47,7 +47,72 @@ def build_report(findings, indicators, timeline, mitre, risk, investigation):
     result = dummy_report_text()  # placeholder, so the whole app works from the first minute
 
     ### WRITE YOUR CODE BELOW THIS LINE ###
-    # Replace the placeholder by building your own `result` here, step by step.
+
+    lines = ["# VulnPilot Incident Report", ""]
+
+    # 1. AI Summary
+    lines.append("## AI Summary")
+    lines.append(str(investigation.summary))
+    lines.append("")
+
+    # 2. Confirmed Observations
+    lines.append("## Confirmed Observations")
+    for observation in investigation.confirmed:
+        lines.append(f"- {observation}")
+    lines.append("")
+
+    # 3. Hypotheses
+    lines.append("## Hypotheses")
+    for hypothesis in investigation.hypotheses:
+        lines.append(f"- {hypothesis}")
+    lines.append("")
+
+    # 4. Recommended Actions
+    lines.append("## Recommended Actions")
+    for action in investigation.actions:
+        lines.append(f"- {action}")
+    lines.append("")
+
+    # 5. Findings Section
+    lines.append("## Findings")
+    for finding in findings:
+        lines.append(f"### {finding.title}")
+        lines.append("Evidence:")
+        lines.append("```")
+        for line in finding.evidence_lines:
+            lines.append(line)
+        lines.append("```")
+        lines.append("")
+
+    # 6. Indicators Section
+    lines.append("## Indicators")
+    for indicator in indicators:
+        lines.append(f"- {indicator.kind}: {indicator.value} ({indicator.count} lines)")
+    lines.append("")
+
+    # 7. Timeline Section
+    lines.append("## Timeline")
+    for item in timeline:
+        lines.append(f"- {item.time} (line {item.line_number}): {item.description}")
+    lines.append("")
+
+    # 8. MITRE ATT&CK Section
+    lines.append("## MITRE ATT&CK")
+    for m in mitre:
+        lines.append(f"- {m['id']} {m['name']} ({m['tactic']})")
+    lines.append("")
+
+    # 9. Risk Assessment
+    lines.append("## Risk Assessment")
+    lines.append(f"Level: {risk.level}")
+    lines.append(f"Score: {risk.score}")
+    lines.append("Reasons:")
+    for reason in risk.reasons:
+        lines.append(f"- {reason}")
+    lines.append("")
+
+    result = "\n".join(lines) + "\n"
+
     ### WRITE YOUR CODE ABOVE THIS LINE ###
 
     return result

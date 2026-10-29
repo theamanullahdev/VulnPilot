@@ -14,7 +14,7 @@ Status values: `todo`, `in progress`, `review`, `done`. Update the Owner and Sta
 | 6 | `vulnpilot/mitre.py` | Hifza (Hifza-Arshad2008) | easy | 1 h | map findings to MITRE ATT&CK using the JSON file | `check_mitre.py` | done |
 | 7 | `vulnpilot/timeline.py` | Zain (zainulabideenab9-cloud) | easy | 1-2 h | sort suspicious events into timeline entries | `check_timeline.py` | done |
 | 8 | `vulnpilot/risk.py` | Noor (DecodeLabs-Internship86) | medium | 2 h | explainable risk score: level, score, reasons | `check_risk.py` | done |
-| 9 | `vulnpilot/report.py` | TODO | easy | 1-2 h | build the markdown incident report | `check_report.py` | todo |
+| 9 | `vulnpilot/report.py` | Haseeb (haseebhassan14129-ship-it) | easy | 1-2 h | build the markdown incident report | `check_report.py` | done |
 | 10 | `vulnpilot/hashing.py` | TODO | easy | 1 h | canonical SHA-256 of report + evidence | `check_hashing.py` | todo |
 | 11 | `vulnpilot/prompts.py` | Fahad (fahad10705) | medium | 2 h | write the AI instructions (writing, not heavy code) | `check_prompts.py` | done |
 | 12 | `vulnpilot/chain_helpers.py` | Mubeen (mubeenfatimaz9882-svg) | easy | 1 h | hex to 32 bytes, Etherscan link (no network) | `check_chain_helpers.py` | done |
